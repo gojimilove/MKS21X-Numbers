@@ -1,20 +1,32 @@
 public class RealNumber{
-	private int x;
+	private double value;
 
-	public RealNumber() {
-		x = 0;
+	public RealNumber(double number) {
+		value = number;
 	}
 
-	public RealNumber(int number) {
-		x = number;
+	public int getValue() {
+		return value;
 	}
 
-	public int getNumber() {
-		return 0;
+	public double add(RealNumber other) {
+
+	}
+
+	public double subtract(RealNumber other) {
+
+	}
+
+	public double multiply(RealNumber other) {
+
+	}
+
+	public double divide(RealNumber other) {
+		
 	}
 
 	public String toString() {
-		return "";
+		return ""+value;
 	}
 
 }

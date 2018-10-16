@@ -1,13 +1,14 @@
 public class RationalNumber extends RealNumber{
 	private int n,d;
 
-	public RationalNumber() {
-
-	}
-
 	public RationalNumber(int num, int den) {
+		super(0);
 		n = num;
 		d = den;
+	}
+
+	public double getValue() {
+		return 0;
 	}
 
 	public int getNumerator() {
@@ -18,11 +19,25 @@ public class RationalNumber extends RealNumber{
 		return 2;
 	}
 
-	//constructor
-	//get method
-	//tostring method
-	//fix rounding errors
-	//change value of number depending on 1s, 0s, etc (ex: 0 / something, something / 1)
-	//compare rational numbers
+	public RationalNumber reciprocal() {
+		return null;
+	}
+
+	public boolean equals(RationalNumber other) {
+		return null;
+	}
+
+	public String toString() {
+		return "0";
+	}
+
+	private static int gcd(int a, int b) {
+
+			return 0;
+	}
+
+	private void reduce() {
+
+	}
 
 }
