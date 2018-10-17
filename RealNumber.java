@@ -10,19 +10,19 @@ public class RealNumber{
 	}
 
 	public double add(RealNumber other) {
-		return value + other;
+		return value + other.getValue();
 	}
 
 	public double subtract(RealNumber other) {
-		return value - other;
+		return value - other.getValue();
 	}
 
 	public double multiply(RealNumber other) {
-		return value * other;
+		return value * other.getValue();
 	}
 
 	public double divide(RealNumber other) {
-		return value / other;
+		return value / other.getValue();
 	}
 
 	public String toString() {
