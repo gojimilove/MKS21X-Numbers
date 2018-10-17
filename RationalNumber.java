@@ -11,14 +11,22 @@ public class RationalNumber extends RealNumber{
 		}
 		reduce();
 	}
-	
-	private void reduce() {
-		n = n / gcd(n, d);
-		d = d / gcd(n, d);
-	}
 
 	public double getValue() {
-		return 0;
+		return (double)n / d;
+	}
+
+	public String toString() {
+		if (n == 0) return "0";
+		if (d == 1) return ""+n;
+		return "" + n + "/" + d;
+	}
+
+	private void reduce() {
+		int num = n;
+		int den = d;
+		n = num / gcd(num, den);
+		d = den / gcd(num, den);
 	}
 
 	public int getNumerator() {
@@ -28,34 +36,20 @@ public class RationalNumber extends RealNumber{
 	public int getDenominator() {
 		return d;
 	}
-
+/*
 	public RationalNumber reciprocal() {
 		RationalNumber newReciprocal = new RationalNumber(d, n);
 		return newReciprocal;
 	}
 
 	public boolean equals(RationalNumber other) {
-		return (n = other.getNumerator && d = other.getDenominator);
+		return (n == other.getNumerator() && d == other.getDenominator());
 	}
-
-	public String toString() {
-		return "" + n + "/" + d;
-	}
-
+*/
 	private static int gcd(int a, int b) {
-		int newa = a;
-		int newb = b;
-		if (a < b) {
-			newa = b;
-			newb = a;
-		}
-		int r = newa % newb;
-		while (r != 0) {
-			newa = newb;
-			newb = r;
-			r = newa % newb;
-		}
-		return newb;
+		return 1;
+		//if (b == 0) return a;
+		//else return gcd(b, b % a);
 	}
 
 }
